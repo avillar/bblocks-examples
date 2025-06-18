@@ -1,5 +1,5 @@
 
-# External Schema (Smart Data Models) (Schema)
+# External Schema (Smart Data Models) test (Schema)
 
 `ogc.bbr.examples.feature.externalSchema` *v1.0*
 
