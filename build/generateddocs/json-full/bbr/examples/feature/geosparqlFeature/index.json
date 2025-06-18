@@ -24,8 +24,8 @@
     ]
   },
   "dependsOn": [
-    "ogc.bbr.examples.feature.propertySet",
-    "ogc.geo.features.feature"
+    "ogc.geo.features.feature",
+    "ogc.bbr.examples.feature.propertySet"
   ],
   "ldContext": "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/annotated/bbr/examples/feature/geosparqlFeature/context.jsonld",
   "schema": {
