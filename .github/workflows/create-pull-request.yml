@@ -1,0 +1,102 @@
+name: Create pull request
+
+on:
+  workflow_dispatch:
+    inputs:
+      title:
+        description: Title for the pull request
+        type: string
+        required: true
+        default: "Building blocks pull request"
+      description:
+        description: Body for the pull request
+        type: string
+      upstreamRepo:
+        description: Upstream repository (leave empty for autodetection)
+        type: string
+      upstreamBranch:
+        description: Upstream branch (master/main by default)
+        type: string
+      buildDirectory:
+        description: Build directory ("build" by default)
+        type: string
+        default: build
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  create-clean-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Get upstream repository
+        id: upstream
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          UPSTREAM_REPO="${{ inputs.upstreamRepo }}"
+          if [[ -z "$UPSTREAM_REPO" ]]; then
+            UPSTREAM_REPO="$(gh repo view --json parent | jq -r '.parent.owner.login + "/" + .parent.name')"
+          fi
+          if [[ -z "$UPSTREAM_REPO" ]]; then
+            echo "Not a forked repo, or parent could not be detected. Please provide the upstream repo URL."  > /dev/stderr
+            exit 1  
+          fi;
+          if [[ "$UPSTREAM_REPO" != *:* ]]; then
+            UPSTREAM_REPO="https://github.com/${UPSTREAM_REPO}.git"
+          fi
+          echo "Using upstream repository: ${UPSTREAM_REPO}"
+          echo "upstream_repo=$UPSTREAM_REPO" >> $GITHUB_OUTPUT
+      - name: Set Git identity
+        run: |
+          git config user.name "${{ github.actor }}"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
+      - name: Create temporary clean branch
+        id: create-branch
+        run: |
+          git remote add upstream ${{ steps.upstream.outputs.upstream_repo }}
+          git fetch upstream
+          
+          TMP_BRANCH="clean-pr-$(date +%s)"
+          git checkout -b "$TMP_BRANCH"
+          
+          UPSTREAM_BRANCH="${{ inputs.upstreamBranch }}"
+          if [[ -z "${UPSTREAM_BRANCH}" ]]; then
+            if git rev-parse --verify --quiet upstream/main; then
+              UPSTREAM_BRANCH=main
+            else
+              UPSTREAM_BRANCH=master
+            fi
+          fi
+          if [[ -z "${UPSTREAM_BRANCH}" ]]; then
+            echo "Could not detect upstream branch automatically" > /dev/stderr
+            exit -1
+          fi
+          echo "Using upstream branch: ${UPSTREAM_BRANCH}"
+          
+          git checkout "upstream/${UPSTREAM_BRANCH}" -- ${{ inputs.buildDirectory }}/
+          if git diff --cached --quiet; then
+            echo "No changes in output, nothing to commit"
+          else
+            git commit -am "Reset output directory to match upstream"
+          fi
+          git push origin "${TMP_BRANCH}"
+          
+          echo "upstream_branch=${UPSTREAM_BRANCH}" >> $GITHUB_ENV
+          echo "branch_name=${TMP_BRANCH}" >> $GITHUB_ENV
+      - name: Create Pull Request
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR_URL=$(gh pr create \
+            --title "${{ inputs.title }}" \
+            --body "${{ inputs.description }}" \
+            --base "${{ env.upstream_branch }}" \
+            --head "${{ github.repository_owner }}:${{ env.branch_name }}")
+          echo "Pull request created: ${PR_URL}"
+          echo "::notice title=Pull Request Created::$PR_URL"
