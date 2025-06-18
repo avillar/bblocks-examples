@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.bbr.examples.semantic-uplift.pre-and-post-uplift - Pre and Post Semantic Uplift example",
   "bblockName": "Pre and Post Semantic Uplift example",
   "bblockId": "ogc.bbr.examples.semantic-uplift.pre-and-post-uplift",
-  "generated": "2025-06-02T20:19:13.187504+00:00",
+  "generated": "2025-06-18T09:00:03.806143+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/bbr/examples/semantic-uplift/pre-and-post-uplift/example_1_1.json",
-        "url": "https://ogcincubator.github.io/bblocks-examples/build/tests/bbr/examples/semantic-uplift/pre-and-post-uplift/example_1_1.json",
+        "url": "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/tests/bbr/examples/semantic-uplift/pre-and-post-uplift/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "application/json"
@@ -74,12 +74,12 @@
               "focusNodes": {
                 "<http://example.com/rules#testHasOneIs1>": {
                   "nodes": [
-                    "_:Nb7cc0eeb89a448d59fc35d5d72228dab"
+                    "_:N849c9b04153f4d67887979db6f50c994"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/semantic-uplift/pre-and-post-uplift/rules.shacl:\n - Shape <http://example.com/rules#testHasOneIs1>: _:Nb7cc0eeb89a448d59fc35d5d72228dab\n"
+              "message": "Focus nodes for _sources/semantic-uplift/pre-and-post-uplift/rules.shacl:\n - Shape <http://example.com/rules#testHasOneIs1>: _:N849c9b04153f4d67887979db6f50c994\n"
             }
           ]
         },
