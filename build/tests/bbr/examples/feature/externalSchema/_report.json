@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for ogc.bbr.examples.feature.externalSchema - External Schema (Smart Data Models)",
-  "bblockName": "External Schema (Smart Data Models)",
+  "title": "Validation report for ogc.bbr.examples.feature.externalSchema - External Schema (Smart Data Models) test",
+  "bblockName": "External Schema (Smart Data Models) test",
   "bblockId": "ogc.bbr.examples.feature.externalSchema",
-  "generated": "2025-06-18T09:00:03.993067+00:00",
+  "generated": "2025-06-18T09:04:02.658056+00:00",
   "result": true,
   "items": [
     {

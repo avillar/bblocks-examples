@@ -10,13 +10,13 @@
 <https://raw.githubusercontent.com/avillar/bblocks-examples/ogc.bbr.examples.feature.externalSchema> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "External Schema (Smart Data Models)" ;
+    rdfs:label "External Schema (Smart Data Models) test" ;
     dct:abstract "This example shows a simple customisation for OGC API Feature using an externally defined domain schema."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-05-19T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/markdown/bbr/examples/feature/externalSchema/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/bblock/ogc.bbr.examples.feature.externalSchema" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/markdown/bbr/examples/feature/externalSchema/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/json-full/bbr/examples/feature/externalSchema/index.json" ] ;
     dct:hasVersion "1.0" ;
@@ -94,12 +94,12 @@
     rdfs:label "GeoJSON transformed to GeoSPARQL geometry" ;
     dct:abstract "This example includes an uplift step to use a GeoSPARQL geometry in a GeoJSON object"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-07-30T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/markdown/bbr/examples/feature/geosparqlFeature/index.md" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/bblock/ogc.bbr.examples.feature.geosparqlFeature" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/json-full/bbr/examples/feature/geosparqlFeature/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/bblock/ogc.bbr.examples.feature.geosparqlFeature" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/markdown/bbr/examples/feature/geosparqlFeature/index.md" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2025-06-18"^^xsd:date ;
     skos:inScheme <https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/> ;
@@ -121,12 +121,12 @@
     rdfs:label "Custom Result for Observation Feature" ;
     dct:abstract "This building block defines an example specialisation of an existing Feature specialisation (SOSA Observation), using another schema to define a result set - in this case the GeoPose model"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-05-19T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/bblock/ogc.bbr.examples.observation.vectorObservationFeature" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/json-full/bbr/examples/observation/vectorObservationFeature/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/markdown/bbr/examples/observation/vectorObservationFeature/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/json-full/bbr/examples/observation/vectorObservationFeature/index.json" ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/bblock/ogc.bbr.examples.observation.vectorObservationFeature" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2025-06-18"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
@@ -154,12 +154,12 @@
     rdfs:label "Pre and Post Semantic Uplift example" ;
     dct:abstract "A sample building block to show how semantic uplift can be customized"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2024-10-03T11:31:00+02:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/json-full/bbr/examples/semantic-uplift/pre-and-post-uplift/index.json" ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/markdown/bbr/examples/semantic-uplift/pre-and-post-uplift/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/bblock/ogc.bbr.examples.semantic-uplift.pre-and-post-uplift" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/json-full/bbr/examples/semantic-uplift/pre-and-post-uplift/index.json" ] ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/bblock/ogc.bbr.examples.semantic-uplift.pre-and-post-uplift" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-06-18"^^xsd:date ;
     skos:inScheme <https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/> ;
@@ -178,10 +178,10 @@
     dct:created "2024-10-03T11:31:00+02:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/bblock/ogc.bbr.examples.transforms.transforms-example" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/markdown/bbr/examples/transforms/transforms-example/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/json-full/bbr/examples/transforms/transforms-example/index.json" ] ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/json-full/bbr/examples/transforms/transforms-example/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/markdown/bbr/examples/transforms/transforms-example/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-06-18"^^xsd:date ;
     skos:inScheme <https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/> ;
@@ -199,12 +199,12 @@
     rdfs:label "Observation Result (Vector based on GeoPose)" ;
     dct:abstract "This building block defines the *property set* for an example specialisation of a SOSA Observation using the GeoPose standard as a result. These two patterns are defined by other Building Blocks."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-05-19T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/bblock/ogc.bbr.examples.observation.vectorObservation" ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/markdown/bbr/examples/observation/vectorObservation/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/json-full/bbr/examples/observation/vectorObservation/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/markdown/bbr/examples/observation/vectorObservation/index.md" ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/bblock/ogc.bbr.examples.observation.vectorObservation" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2025-06-18"^^xsd:date ;
     skos:inScheme <https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/> ;
@@ -235,12 +235,12 @@
     rdfs:label "Example property set for Features" ;
     dct:abstract "This shows how to define a propertyset for a feature - which can be re-used in different containers - such as a GeoJSON Feature schema"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2023-05-19T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/json-full/bbr/examples/feature/propertySet/index.json" ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/markdown/bbr/examples/feature/propertySet/index.md" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/bblock/ogc.bbr.examples.feature.propertySet" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/markdown/bbr/examples/feature/propertySet/index.md" ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/generateddocs/json-full/bbr/examples/feature/propertySet/index.json" ] ;
     dct:hasVersion "1.0" ;
     dct:modified "2025-06-18"^^xsd:date ;
     dct:source <https://www.w3.org/TR/vocab-ssn/> ;
@@ -276,14 +276,14 @@ More complex examples will include transformation testing - testing a format can
         <https://opengeospatial.github.io/ogcapi-sosa/build/register.json> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-06-18T09:00:08.577051"^^xsd:dateTime ;
-    prov:startedAtTime "2025-06-18T09:00:08.496682"^^xsd:dateTime ;
+    prov:endedAtTime "2025-06-18T09:04:09.802057"^^xsd:dateTime ;
+    prov:startedAtTime "2025-06-18T09:04:09.721515"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/yaml" ;
             rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
         [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:28a21509c4c5ac93d1f68dc91cb43a4df04cff48" ;
+            dct:hasVersion "git:67faf6b20853d163140784cdff498479d871dc21" ;
             rdfs:seeAlso <https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/register.json> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
