@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/annotated/bbr/examples/observation/vectorObservationFeature/context.jsonld",
+    "https://ogcincubator.github.io/bblocks-examples/build/annotated/bbr/examples/observation/vectorObservationFeature/context.jsonld",
     {
       "resultschema": "http://example.org/resultschema/",
       "pose": "resultschema:pose",

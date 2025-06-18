@@ -1,5 +1,5 @@
 {
-  "@context": "https://raw.githubusercontent.com/avillar/bblocks-examples/undefined/build/annotated/bbr/examples/feature/geojsonFeature/context.jsonld",
+  "@context": "https://ogcincubator.github.io/bblocks-examples/build/annotated/bbr/examples/feature/geojsonFeature/context.jsonld",
   "id": "f1",
   "type": "Feature",
   "geometry": {
